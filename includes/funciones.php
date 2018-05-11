@@ -64,7 +64,7 @@ function resuelveGet($nro_producto=0){
 
 
 function resuelveDelete($nro_producto){
-
+    //tomo la instancia global de la conexion a la DB
     global $mysql;
 
     $mysql->query("delete from articulos where codigo=$nro_producto") or die($mysql->error);
@@ -86,7 +86,6 @@ function resuelvePut($nro_producto,$_PUT){
 
 
 function resuelvePost(){
-
     //tomo la instancia global de la conexion a la DB
     global $mysql;
 
@@ -95,7 +94,6 @@ function resuelvePost(){
 
     //cierro la conexion a la base de datos
     $mysql->close();
-
 }
 
 ?>
