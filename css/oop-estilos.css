@@ -1,0 +1,233 @@
+body{
+	font-family: 'Text Me One', sans-serif;
+	color: #000;
+
+	}
+
+#cabecera{
+width: 100%;
+height: 100px;
+}
+
+#menu{
+width: 100%;
+height: 50px;	
+background-color:#036;
+text-align: center;
+}
+	
+#menu a:link{
+color:#fff;
+text-decoration: none;
+}	
+
+#menu a:active{
+color:#ff;
+text-decoration: none;
+}	
+
+#menu a:visited{
+color:#fff;
+text-decoration: none;
+}	
+
+#menu a:hover{
+color:#fff;
+text-decoration: none;
+}	
+
+#contenido{padding: 10px;}
+
+#img_php{
+float: left;
+margin-top:5px;
+margin-right: 10px;
+}
+
+#text_der_img_php{
+margin-top:5px;
+}
+
+ul.menu_nav ,
+ul.menu_nav  li,
+ul.menu_nav  ul {
+ list-style: none;
+ text-align: center;
+ margin-right: 30px;
+}
+
+ul.menu_nav  {
+ position: relative;
+ z-index: 597;
+ float: left;
+ background-color:#036;
+}
+
+ul.menu_nav  li {
+ color: white;	
+ float: left;
+ line-height: 1.3em;
+ vertical-align: middle;
+ text-align: center;
+ zoom: 1;
+ width: 140px;
+}
+
+ul.menu_nav  li.hover,
+ul.menu_nav  li:hover {
+ position: relative;
+ z-index: 599;
+ cursor: default;
+ background-color:#F90;
+ float: left;
+ width: 140px;
+}
+
+ul.menu_nav  ul {
+ visibility: hidden;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ z-index: 598;
+ width: 100%;
+}
+
+ul.menu_nav  ul li {
+ float: left;
+ background-color: #000;
+ margin-left: -40px;
+}
+
+ul.menu_nav  ul ul {
+ top: 1px;
+}
+
+ul.menu_nav  li:hover > ul {
+ visibility: visible;
+}
+
+ul.menu_nav  li.rtl ul {
+ top: 100%;
+ right: 0;
+ left: auto;
+}
+
+ul.menu_nav  li.rtl ul ul {
+ top: 1px;
+ right: 99%;
+ left: auto;
+}
+
+ul.desplegable {
+ font-weight: bold;
+}
+
+ul.desplegable li {
+padding: 7px 10px;
+border-style: solid;
+border-width: 1px 1px 1px 0;
+border-color: #fff #d9d9d9 #d9d9d9;
+background-color: #f6f6f6;
+color: #000;
+}
+
+#footer{
+float: left;
+width: 100%;
+text-align: center;
+font-weight: bold;
+background-color:#036;
+color: white;
+}
+
+#datosLogueadoCabecera{
+#float: left;
+width: 100%;
+text-align: left;
+font-weight: bold;
+background-color:#CEE3F6;
+color: #0489B1;
+}
+
+
+
+
+
+nav{
+    /*Bordes redondeados*/
+    -webkit-border-radius:10px;/*Para chrome y Safari*/
+    -moz-border-radius:10px;/*Para Firefox*/
+    -o-border-radius:10px;/*Para Opera*/
+    border-radius:10px;/*El estandar por defecto*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));/*Para chrome y Safari*/
+    /*Degradados*/
+    background-image: -moz-linear-gradient(top center, #FFF, #CCC);/*Para Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #CCC);/*Para Opera*/
+    background-image: linear-gradient(top, #FFF, #CCC);/*El estandar por defecto*/
+    overflow:hidden;
+    padding:10px;
+    width:950px;
+}
+nav ul{
+    list-style:none;
+    margin:0 10px 0 10px;
+    padding:0;
+}
+nav ul li{
+    /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    margin-right:10px;
+    text-align:center;
+    /*Sombras para texto, los mismos parametros que box-shadow*/
+    text-shadow: 0px 1px 0px #FFF;
+}
+nav ul li:hover{
+    /*Degradado de fondo*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to( #E3E3E3));/*Chrome y Safari*/
+    background-image: -moz-linear-gradient(top center, #FFF, #E3E3E3);/*Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #E3E3E3);/*Opera*/
+    background-image: linear-gradient(top, #FFF, #E3E3E3);/*Estandar por defecto*/
+    /*Sombras*/
+    -webkit-box-shadow:  1px -1px 0px #999;/*Chrome y Safari*/
+    -moz-box-shadow:  1px -1px 0px #999;/*Firefox*/
+    -o-box-shadow:  1px -1px 0px #999;/*Opera*/
+    box-shadow:  1px -1px 0px #999;/*Estandar por defecto*/
+    border:1px solid #E3E3E3;
+}
+nav ul li a{
+    color:#999;
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    /*Transiciones*/
+    -webkit-transition: 0.4s linear all;
+    -moz-transition: 0.4s linear all;
+    -o-transition: 0.4s linear all;
+    transition: 0.4s linear all;
+}
+nav ul li a:hover {
+    color:#000;
+}
+
+#div_imagen_de_carga{
+    position: absolute;
+    left: 450px;
+    top: 350px;
+    z-index: 2000;
+}
+
+
+#div_imagen_de_carga2{
+    position: absolute;
+    left: 350px;
+    top: 350px;
+    z-index: 2000;
+}
+

@@ -1,0 +1,15 @@
+.tablalistado {
+    border-collapse: collapse;
+    box-shadow: 0px 0px 8px #000;
+    margin:20px;
+}
+.tablalistado th{  
+    border: 1px solid #000;
+    padding: 5px;
+    background-color:#ffd040;	  
+}  
+.tablalistado td{  
+    border: 1px solid #000;
+    padding: 5px;
+    background-color:#ffdd73;	  
+}
