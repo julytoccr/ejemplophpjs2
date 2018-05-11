@@ -1,11 +1,11 @@
 <?php
 
-
 function resuelveGet($nro_producto=0){
 
   //tomo la instancia global de la conexion a la DB
   global $mysql;
 
+  //Lista TOTAL de productos
   if($nro_producto==0){
     /*****************************************************
     * Se encarga de armar el json con la lista de productos
@@ -33,11 +33,11 @@ function resuelveGet($nro_producto=0){
     //Devuelvo el Json al browser con lista de productos
     return $resultado;
   }
+
    /*****************************************************************************
    * Se encarga de buscar un producto y devolver un json con los datos del mismo
    * si lo encuentra, sino envia un JSON con el error
    */
-    //tomo la instancia global de la conexion a la DB
 
     //Si no encuentro mando este json por defecto indicando que no encontro nada
     $resultado="{\"descripcion\": \"NO ENCONTRADO!!\",\"precio\": \"0\",\"codigo\": \"0\"}";
@@ -74,19 +74,15 @@ function resuelveDelete($nro_producto){
 
 
 function resuelvePut($nro_producto,$_PUT){
- //tomo la instancia global de la conexion a la DB
- global $mysql;
+    //tomo la instancia global de la conexion a la DB
+    global $mysql;
 
- $consulta="update articulos set descripcion='$_PUT[nombre]',precio=$_PUT[precio],codigorubro=$_PUT[rubro] where codigo=$nro_producto";
+    $consulta="update articulos set descripcion='$_PUT[nombre]',precio=$_PUT[precio],codigorubro=$_PUT[rubro] where codigo=$nro_producto";
 
- $mysql->query($consulta) or die($mysql->error());
+    $mysql->query($consulta) or die($mysql->error());
 
- $mysql->close();
-
-
+    $mysql->close();
 }
-
-
 
 
 function resuelvePost(){
@@ -101,6 +97,5 @@ function resuelvePost(){
     $mysql->close();
 
 }
-
 
 ?>

@@ -1,11 +1,19 @@
 <?php
+ /* Este archivo actua como Controller del API
+  * Recibe via ajax las peticiones con sus correspondientes metodos
+  * y devuelve en caso que haga falta un JSON al browser
+  * que sera el encargado de procesarlo y mostrarlo
+*/
+ // Includeo las cosas necesarias
+ // Conexion a la BD Mysql
  include("../includes/conectarDb.php");
+ // Funciones que resuelven las peticiones a la API 
  include("../includes/funciones.php");
 
  $metodo=$_SERVER['REQUEST_METHOD'];
  $uri=$_SERVER['REQUEST_URI'];
 
- //desarmo la url para analizarla luego, la conviero en un arrary
+ //desarmo la url para analizarla luego, la convierto en un arrary
  $array_uri = explode("/", $uri);
 
  //quito las primera parte de la uri
@@ -40,10 +48,10 @@
           header('HTTP/1.1 404 Not Found');
         }
        break;
-  case 'POST':
+  case 'POST'://Metodo POST entro por aca
        resuelvePost();
        break;
-  case 'PUT':
+  case 'PUT'://Metodo PUT entro por aca
         $recurso = array_shift($array_uri);
         //comienza con api
         if($recurso == 'api'){
@@ -71,7 +79,7 @@
           header('HTTP/1.1 404 Not Found');
         }
         break;
-  case 'DELETE':
+  case 'DELETE'://Metdodo DELETE entro por aca
         $recurso = array_shift($array_uri);
         //comienza con api
         if($recurso == 'api'){
@@ -97,7 +105,7 @@
           header('HTTP/1.1 404 Not Found');
         }
        break;
-  default:
+  default://Otros metodos NO permitidos por el API
         header('HTTP/1.1 405 Method not allowed');
         header('Allow: GET, PUT, DELETE, POST');
  }
